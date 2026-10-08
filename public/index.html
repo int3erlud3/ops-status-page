@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Ops Status Page</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Ops Status Page</h1>
+    <p class="subtitle">server-healthcheck &amp; cert-expiry-checker results · part of the Bastion Ops Toolkit</p>
+  </header>
+  <main>
+    <div id="message" class="message" role="status" aria-live="polite">Loading…</div>
+    <div id="summary"></div>
+
+    <h2>Hosts</h2>
+    <div id="hosts"></div>
+
+    <h2>Certificates</h2>
+    <div id="certs"></div>
+
+    <section class="loader" aria-label="Load your own data">
+      <h2>Load JSON</h2>
+      <p>Files are read locally in your browser and never uploaded.</p>
+      <label>server-healthcheck JSON <input type="file" id="file-healthcheck" accept="application/json,.json"></label>
+      <label>cert-expiry-checker JSON <input type="file" id="file-certs" accept="application/json,.json"></label>
+      <button type="button" id="reload">Reload data/</button>
+    </section>
+  </main>
+  <footer>Static page · no external resources · strict Content-Security-Policy</footer>
+</body>
+</html>

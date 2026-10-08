@@ -1,0 +1,9 @@
+{
+  "status": "CRITICAL",
+  "results": [
+    {"host":"www.example.com","port":443,"status":"OK","days_left":74,"not_after":"2026-12-21T12:00:00+00:00","subject":"www.example.com","issuer":"Example CA","error":null},
+    {"host":"mail.example.com","port":465,"status":"WARNING","days_left":19,"not_after":"2026-10-27T09:30:00+00:00","subject":"mail.example.com","issuer":"Example CA","error":null},
+    {"host":"vpn.example.com","port":443,"status":"CRITICAL","days_left":4,"not_after":"2026-10-12T00:00:00+00:00","subject":"vpn.example.com","issuer":"Example CA","error":null},
+    {"host":"legacy.example.com","port":8443,"status":"UNKNOWN","days_left":null,"not_after":null,"subject":null,"issuer":null,"error":"connection timed out"}
+  ]
+}

@@ -1,0 +1,27 @@
+:root {
+  --bg: #f6f8fa; --fg: #1d2430; --muted: #57606a; --card: #fff; --border: #d0d7de;
+  --ok: #1a7f37; --warn: #9a6700; --crit: #cf222e; --unknown: #6e7781;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0d1117; --fg: #e6edf3; --muted: #8d96a0; --card: #161b22; --border: #30363d; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--fg); }
+header, main, footer { max-width: 1100px; margin: 0 auto; padding: 1rem 1.25rem; }
+h1 { margin: .5rem 0 0; }
+.subtitle, .meta, footer, .empty { color: var(--muted); }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+.card, .host, .loader { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; }
+.card h2 { margin-top: 0; font-size: 1.1rem; }
+.counts { list-style: none; padding: 0; display: flex; gap: 1rem; flex-wrap: wrap; margin: 0; }
+.badge { display: inline-block; min-width: 5.5rem; text-align: center; font-size: .75rem; font-weight: 700; padding: .15rem .5rem; border-radius: 999px; color: #fff; }
+.badge-ok { background: var(--ok); } .badge-warning { background: var(--warn); }
+.badge-critical { background: var(--crit); } .badge-unknown { background: var(--unknown); }
+table { width: 100%; border-collapse: collapse; font-size: .9rem; background: var(--card); }
+caption { text-align: left; color: var(--muted); padding: .25rem 0; }
+th, td { border: 1px solid var(--border); padding: .35rem .5rem; text-align: left; vertical-align: top; word-break: break-word; }
+th { background: var(--bg); }
+.message { padding: .5rem .75rem; border-left: 4px solid var(--ok); background: var(--card); margin-bottom: 1rem; }
+.message.error { border-color: var(--crit); }
+.loader label { display: block; margin: .5rem 0; }
+button { padding: .4rem .9rem; border-radius: 6px; border: 1px solid var(--border); background: var(--bg); color: var(--fg); cursor: pointer; }

@@ -1,0 +1,23 @@
+[
+  {"host":"web01","timestamp":"2026-10-08T08:00:00Z","status":"WARNING","exit_code":1,
+   "checks":[
+     {"name":"cpu","status":"OK","value":12,"message":"load1=0.48 cores=4"},
+     {"name":"memory","status":"OK","value":61,"message":"used=61% (4.8G of 7.8G)"},
+     {"name":"disk:/","status":"WARNING","value":84,"message":"/ used 84% (warn 80%)"},
+     {"name":"service:nginx","status":"OK","value":null,"message":"active"}
+   ]},
+  {"host":"db01","timestamp":"2026-10-08T08:00:02Z","status":"CRITICAL","exit_code":2,
+   "checks":[
+     {"name":"cpu","status":"OK","value":35,"message":"load1=5.6 cores=16"},
+     {"name":"memory","status":"WARNING","value":88,"message":"used=88% (56G of 64G)"},
+     {"name":"disk:/u02","status":"CRITICAL","value":96,"message":"/u02 used 96% (crit 90%)"},
+     {"name":"service:oracle-ohasd","status":"OK","value":null,"message":"active"}
+   ]},
+  {"host":"mon01","timestamp":"2026-10-08T08:00:01Z","status":"OK","exit_code":0,
+   "checks":[
+     {"name":"cpu","status":"OK","value":8,"message":"load1=0.31 cores=4"},
+     {"name":"memory","status":"OK","value":42,"message":"used=42% (3.3G of 7.8G)"},
+     {"name":"disk:/","status":"OK","value":37,"message":"/ used 37%"},
+     {"name":"service:grafana-server","status":"OK","value":null,"message":"active"}
+   ]}
+]
